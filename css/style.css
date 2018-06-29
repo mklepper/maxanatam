@@ -1,0 +1,158 @@
+*{
+  box-sizing: border-box;
+  transition-duration: 0.3s;
+}
+body{
+  background-color: #2a8878;
+  color: #feebda;
+  font-family: "Cookie";
+  margin: 0;
+  padding: 0;
+  text-align:center;
+
+}
+header{
+  background-color: #0c7973;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+header nav{
+  display: none;
+}
+header a i  {
+  color: #feebda;
+  padding: 5px;
+}
+header input {
+  background-color: #2a8878;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5px;
+  width: 80px;
+}
+/*color of the placeholder*/
+header input::placeholder{
+  color: #feebda;
+}
+
+main{
+  padding: 5px;
+}
+main div img{
+  height: 150px;
+}
+main h1{
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+main p a {
+  text-decoration: none;
+  border-bottom: 1px dotted #e782a4;
+  color: #e782a4;
+}
+main article{
+  background-color: #feebda;
+  color: #e782a4;
+  padding: 10px;
+  margin: 10px;
+}
+main article img{
+  display: none;
+}
+main article h2{
+  border-bottom: 1px dotted #e782a4;
+}
+
+@media screen and (min-width:800px) {
+  /* in last case
+  header a i {
+    display: none !important;
+  }
+  */
+  .fas.fa-bars{
+    display: none;
+  }
+  header {
+    display: block;
+    background-color: #2a8878;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  header input{
+    background-color: rgba(255,255,255,0.1);
+    width: 150px;
+  }
+  header nav {
+    display: block; /*remove the display none*/
+  }
+  header nav ul {
+    text-align: center;
+    background-color: #feebda;
+    padding: 10px;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    padding: 20px 10px;
+    color: #991d42;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  main div {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+  }
+  .bigArticle{
+    text-align: left;
+  }
+  .bigArticle p {
+    font-size: 1.2rem;
+  }
+  .articlesList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .articlesList article{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header{
+    text-align: right;
+  }
+  header input {
+    margin-right: 10px;
+  }
+  header nav ul {
+    text-align: right;
+  }
+  main div img {
+    position: absolute;
+    top:15px;
+    left: 15px;
+    height: 100px;
+  }
+  .bigArticle{
+    width: 800px;
+    margin: auto;
+  }
+  .bigArticle p {
+    column-count: 2;
+  }
+  .articlesList article{
+    position: relative;
+  }
+  .articlesList article img {
+    display: initial;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
